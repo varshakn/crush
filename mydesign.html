@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            background: url('https://st4.depositphotos.com/3527977/20205/i/450/depositphotos_202052102-stock-photo-pink-glitter-texture-christmas-abstract.jpg') center/cover no-repeat ;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(141, 22, 22, 1); /* Adjust the alpha value for transparency */
+            pointer-events: none; /* Allows clicks to pass through the overlay to elements underneath */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+
+        .head-title {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 24px; 
+            margin-bottom: 20px; 
+        }
+
+        img {
+            max-width: 50%;
+            max-height: 100%;
+            border: 0px solid #333;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .YES-button {
+            background-color: plum;
+            border-radius: 5%;
+            margin-top: 3px;
+            padding: 10px 20px;
+            margin-right: 5%; 
+            cursor: pointer;
+            font-weight: bolder;
+            border-color: blueviolet;
+        }
+
+        .NO-button {
+            background-color: plum;
+            border-radius: 5%;
+            margin-top: 3px;
+            padding-top: 5px;
+            margin-right: 20px;
+            cursor: pointer;
+            font-weight: bold;
+           
+             
+        }
+
+        .jumping-button {
+            background-color: plum;
+            border: none;
+            border-radius: 3px;
+            margin-top: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: absolute;
+            pointer-events: painted;
+            animation: jump 2s infinite; 
+            margin-left: 60px;
+        }
+
+        @keyframes jump {
+            0%, 100% {
+                transform: translate(-400px, -400px); /* Move the button up and to the left */
+            }
+            25% {
+                transform: translate(400px, -400px); /* Move the button up and to the right */
+            }
+            50% {
+                transform: translate(100px, 100px); /* Move the button down and to the right */
+            }
+            75% {
+                transform: translate(-400px, 400px); /* Move the button down and to the left */
+            }
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="head-title">Will you go out with me!</h1>
+    <img src="https://media.tenor.com/Hw566X9Ft5sAAAAi/cat-cute.gif" >
+    
+    <button class="YES-button">YES</button>
+    <button class="jumping-button" onclick="alert('No button is moving!')">No</button>
+<script>
+    function handleYesClick() {
+            alert('You clicked Yes!');}
+</script>
+</body>
+</html>
+
+
