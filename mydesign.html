@@ -105,6 +105,7 @@
     </style>
     <script>
         console.log('Script is running!');
+
         function handleButtonClick(response) {
             const username = getQueryParam('username');
             alert(`Username: ${username}\nResponse: ${response}`);
@@ -123,11 +124,12 @@
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
         }
-        function handleYesClick() {
-            const username =getQueryParam('username')
-            alert('You clicked Yes!');
 
-            window.location.href = 'yes.html'
+        function handleYesClick() {
+            const username = getQueryParam('username');
+            alert('You clicked Yes!');
+            // Redirect to the next page
+            window.location.href = 'yes.html';
         }
 
         function handleNoClick() {
