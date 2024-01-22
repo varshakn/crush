@@ -105,8 +105,29 @@
     </style>
     <script>
         console.log('Script is running!');
+        function handleButtonClick(response) {
+            const username = getQueryParam('username');
+            alert(`Username: ${username}\nResponse: ${response}`);
+            
+            // Send the response to the server
+            fetch(`https://varshakn.github.io/crush/submit-response`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, response }),
+            });
+        }
+
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
         function handleYesClick() {
+            const username =getQueryParam('username')
             alert('You clicked Yes!');
+
+            window.location.href = 'file:///home/hp/html%20and%20css/yes.html'
         }
 
         function handleNoClick() {
