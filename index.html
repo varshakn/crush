@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,12 +88,59 @@
                 // Submit the form to the server
                 document.getElementById('userForm').submit();
             }
-        </script>
+        
+            // Example GET request
+            fetch('https://nrp8pnl5i5.execute-api.us-east-1.amazonaws.com/')
+              .then(response => response.json())
+              .then(data => {
+                // Handle the response data
+                console.log(data);
+              })
+              .catch(error => {
+                // Handle errors
+                console.error('Error:', error);
+              });
+        
+            // Example POST request
+            fetch('https://app.serverless.com/varshaaa/apps/crushproject/crushproject/dev/us-east-1'{
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                // Add any other headers if needed
+              },
+              body: JSON.stringify({
+                // Your POST data goes here
+              }),
+            })
+              .then(response => response.json())
+              .then(data => {
+                // Handle the response data
+                console.log(data);
+              })
+              .catch(error => {
+                // Handle errors
+                console.error('Error:', error);
+              });
+
+              <!-- In your HTML file -->
+       
+
+          </script>
+        </body>
+        </html>
+        
             <img src="https://64.media.tumblr.com/3eeab2bc42edc568f6737bfade10ea43/tumblr_p5yyu5GEjq1rpu8e5o1_1280.png">
+
             <button type="submit" class="heart-button">SUBMIT❤</button>
+            <!-- In your HTML file -->
+<script src="/home/hp/html and css/script.js"></script>
+
         </form>
     </div>
 </body>
 </html>
+
+              
+
 
        
